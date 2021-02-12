@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginUSER } from "../../_actions/userAction";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
 
   const onEmailHandler = (e) => {
     setEmail(e.currentTarget.value);
@@ -15,6 +18,24 @@ function LoginPage(props) {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
+    //로그인을 진행하기 위해서는
+    //첫번재 useDispatch 를 활용해서 액션을 dispatch 해준다.
+    const body = {
+      email: email,
+      password: password,
+    };
+    dispatch(loginUSER(body))
+      .then((res) => {
+        console.log(res);
+        if (res.payload.loginSuccess) {
+          props.history.push("/");
+        } else {
+          alert(res.payload.message);
+        }
+      })
+      .catch((err) => {
+        console.loe(err);
+      });
   };
 
   return (

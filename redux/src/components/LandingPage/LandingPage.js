@@ -1,8 +1,22 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../../_actions/userAction";
 
 function LandingPage(props) {
-  const onClickHandler = () => {};
+  const dispatch = useDispatch();
+  const onClickHandler = () => {
+    dispatch(logoutUser())
+      .then((res) => {
+        console.log(res);
+        if (res.payload.success) {
+          props.history.push("/login");
+        } else {
+          alert("로그아웃에 실패하였습니다.");
+        }
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div
@@ -14,7 +28,6 @@ function LandingPage(props) {
         height: "100vh",
       }}
     >
-
       <h2>시작페이지</h2>
       <button onClick={onClickHandler}>로그아웃</button>
     </div>
