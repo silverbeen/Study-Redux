@@ -16,6 +16,7 @@ export default function (Componet, option, adminRoute = null) {
         // console.log("훅 테스트");
         //로그인을 하지 않았을때
         if (!res.payload.isAuth) {
+          console.log(res.payload.isAuth);
           if (option) {
             //option이 true일때 로그인으로 강제 이동
             props.history.push("/login");
