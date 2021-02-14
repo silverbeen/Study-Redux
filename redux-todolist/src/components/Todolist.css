@@ -1,0 +1,8 @@
+.TodoList ul li .text {
+    flex: 1;
+  }
+  
+  .TodoList ul li .text.entered {
+    text-decoration: line-through;
+    color: gray;
+  }
