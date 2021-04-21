@@ -1,0 +1,37 @@
+.product-item {
+  display: inline-block;
+  width: calc(100% / 4 - 20px);
+  margin-bottom: 20px;
+}
+
+.item-image {
+  width: 100%;
+  height: 250px;
+}
+
+.item-name {
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.item-price {
+  margin-bottom: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  color: red;
+}
+
+.add-cart-btn {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+}
+
+.add-cart-btn .fas {
+  margin-right: 5px;
+}

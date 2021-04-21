@@ -1,0 +1,60 @@
+{
+  "productList": [
+    {
+      "id": 1,
+      "product_name": "멋쟁이 양털 외투",
+      "price": 35000,
+      "product_img": "https://image.brandi.me/cproduct/2020/11/12/23464617_1605150605_image1_M.jpg",
+      "is_checked": "false"
+    },
+    {
+      "id": 2,
+      "product_name": "따수운 청자켓",
+      "price": 58000,
+      "product_img": "https://image.brandi.me/cproduct/2019/11/26/12194971_1574748735_image1_M.jpg",
+      "is_checked": "false"
+    },
+    {
+      "id": 3,
+      "product_name": "관리 잘해야되는 하얀 슬랙스",
+      "price": 28000,
+      "product_img": "https://image.brandi.me/cproduct/2020/11/18/12187270_1605665330_image1_M.jpg",
+      "is_checked": "false"
+    },
+    {
+      "id": 4,
+      "product_name": "시크한 외투",
+      "price": 40000,
+      "product_img": "https://image.brandi.me/cproduct/2019/11/15/11943237_1573813327_image1_M.jpg",
+      "is_checked": "false"
+    },
+    {
+      "id": 5,
+      "product_name": "남친룩 녹색 니트",
+      "price": 19000,
+      "product_img": "https://image.brandi.me/cproduct/2020/09/11/19362643_1599816894_image1_M.jpg",
+      "is_checked": "false"
+    },
+    {
+      "id": 6,
+      "product_name": "어좁이 그레이색 외투",
+      "price": 99000,
+      "product_img": "https://image.brandi.me/cproduct/2020/11/03/14819779_1604406041_image1_M.jpg",
+      "is_checked": "false"
+    },
+    {
+      "id": 7,
+      "product_name": "깔끔한 직장인 상의",
+      "price": 48000,
+      "product_img": "https://image.brandi.me/cproduct/2020/10/26/21642690_1603706901_image1_M.jpg",
+      "is_checked": "false"
+    },
+    {
+      "id": 8,
+      "product_name": "체크무늬 셔츠",
+      "price": 37000,
+      "product_img": "https://image.brandi.me/cproduct/2020/10/19/21157395_1603059541_image1_M.jpg",
+      "is_checked": "false"
+    }
+  ]
+}

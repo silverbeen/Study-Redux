@@ -1,0 +1,16 @@
+.product-list {
+  margin-bottom: 50px;
+  padding: 0 150px;
+}
+
+.product-list-title {
+  padding: 5px 0;
+  border-bottom: 2px solid #000;
+  margin-bottom: 40px;
+}
+
+.product-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
