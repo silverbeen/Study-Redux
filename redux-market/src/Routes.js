@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
-import ProductList from "./components/productList/ProductList";
-import CartList from "./components/cart/cartList/CartList";
+import ProductList from "./components/ProductList";
+import CartList from "./components/CartList";
 
 export default function Routes() {
   return (

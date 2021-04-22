@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
-import { addCart } from "../store/action/index";
+import { addCart } from "../store/action";
 import "./ProductItem.css";
 
 export default function ProductItem({ item }) {

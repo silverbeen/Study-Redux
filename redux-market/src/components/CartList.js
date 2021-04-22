@@ -6,8 +6,6 @@ import "./CartList.css";
 export default function CartList() {
   const cart = useSelector((store) => store.cartReducer);
 
-  console.log(cart.length);
-
   const cartItem =
     cart.length >= 1 ? (
       cart.map((item, idx) => {
