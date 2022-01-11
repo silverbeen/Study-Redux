@@ -1,10 +1,16 @@
 import React from "react";
-import { Constate } from "./components";
+import { Constate, ReactQuery } from "./components";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 function App() {
+  const queryClient = new QueryClient();
+
   return (
     <>
-      <Constate />
+      <QueryClientProvider client={queryClient}>
+        <Constate />
+        <ReactQuery />
+      </QueryClientProvider>
     </>
   );
 }
