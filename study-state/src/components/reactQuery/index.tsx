@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { QueryClient, useMutation, useQuery } from "react-query";
+import { QueryClient, useMutation, useQueries, useQuery } from "react-query";
+import { StructuredType } from "typescript";
 import { getPortfolioApi, getPostApi } from "../../lib/api/post";
 
 const ReactQuery = () => {
   const [item, setItem] = useState();
-  const [inputs, setInputs] = useState({ state: "", term: "" });
+  const [inputs, setInputs] = useState<{ state: string; term: string }>({
+    state: "",
+    term: "",
+  });
   const newsQuery = useQuery(["news", item], () => getPostApi());
   const portfolioQuery = useQuery(["portfolio"], () => getPortfolioApi());
+
+  const results = useQueries([
+    { queryKey: ["posts", 1], queryFn: getPostApi },
+    { queryKey: ["poset", 2], queryFn: getPortfolioApi , retry : 10},
+  ]);
+
+  console.log(results);
 
   const queryClient = new QueryClient();
 
@@ -21,12 +32,19 @@ const ReactQuery = () => {
   const onSubmit = (e: any, inputs: any) => {
     e.preventDefault();
 
-    mutation.mutate(inputs);
+    mutation.mutate(inputs, {
+      onSuccess: () => {
+        alert("성공!!");
+      },
+      onError: (error) => {
+        console.log(error);
+      },
+    });
   };
 
   useEffect(() => {
-    console.log(portfolioQuery);
-  }, [portfolioQuery]);
+    console.log(portfolioQuery?.data?.data?.portfolio_list);
+  }, []);
 
   const article = () => {
     return (

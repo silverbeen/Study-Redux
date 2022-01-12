@@ -15,7 +15,14 @@ export function getPostApi() {
 }
 
 export function getPortfolioApi() {
-  const data = axios(`${MAINURL}/portfolio/recent`);
+  const data = axios(
+    `${MAINURL}/portfolio/list?page=0&size=50&field=&sort=date,desc&query=&searchType=title`,
+    {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("access-token"),
+      },
+    }
+  );
   return data;
 }
 
